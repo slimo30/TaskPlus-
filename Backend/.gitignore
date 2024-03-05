@@ -1,0 +1,15 @@
+env
+*.pyc
+__pycache__/
+*.sqlite3
+/staticfiles/
+/media/
+/.vscode/
+/.idea/
+/.venv/
+/.env
+/.coverage
+/.pytest_cache/
+/.mypy_cache/
+/.pylint_cache/
+
