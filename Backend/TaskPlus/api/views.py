@@ -13,7 +13,6 @@ from django.contrib.auth.models import User
 from .models import * 
 from .serializers import *  # 
 
-import os
 from pathlib import Path  # Import Path from pathlib module
 from rest_framework import viewsets, status
 from rest_framework.response import Response
@@ -22,6 +21,14 @@ from .models import Task
 from .serializers import TaskSerializer
 from rest_framework.decorators import action
 
+
+
+from TaskPlus.celery import long_running_task
+# test celery
+def test_celelry(request):
+    long_running_task.delay("test")
+    return HttpResponse('Task has been scheduled!')
+# ===============================================================
 
 @api_view(["POST"])
 @permission_classes([AllowAny])

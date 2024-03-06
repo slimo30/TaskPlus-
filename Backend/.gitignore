@@ -13,3 +13,6 @@ __pycache__/
 /.mypy_cache/
 /.pylint_cache/
 
+# ignore migrations
+
+/migrations/  exclude __init__.py

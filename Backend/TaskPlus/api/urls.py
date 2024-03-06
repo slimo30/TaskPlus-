@@ -30,4 +30,5 @@ urlpatterns = [
     path('categories/', views.CategoryListCreateView.as_view(), name='category-list-create'),
     path('categories/<int:pk>/', views.CategoryRetrieveUpdateDestroyView.as_view(), name='category-retrieve-update-destroy'),
 
+    path("test_celelry/", views.test_celelry, name="test_celery"),
 ]

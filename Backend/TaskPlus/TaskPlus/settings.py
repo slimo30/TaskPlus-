@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'api',
     'rest_framework.authtoken',
     'colorfield',
+    'TaskPlus',
+    'django_celery_beat',
+    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +132,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
